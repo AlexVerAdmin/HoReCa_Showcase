@@ -105,7 +105,7 @@
 
   <!-- ── ROI-блок ── -->
   {#if auditData}
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 mb-6 flex flex-col sm:flex-row sm:items-center gap-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 mb-10 flex flex-col sm:flex-row sm:items-center gap-4 roi-badge-3d">
       <div class="flex items-center gap-3">
         <span class="text-3xl font-bold text-slate-100">{auditData.rating?.toFixed(1)}</span>
         <span class="text-xl">{starsHtml(auditData.rating)}</span>
@@ -230,6 +230,15 @@
 
   .cta-dynamic:active {
     transform: translateY(-1px) scale(0.99);
+  }
+
+  /* ROI плашка: наклон вперед (верхняя часть ближе к пользователю) */
+  .roi-badge-3d {
+    transform: perspective(1000px) rotateX(-12deg) translateZ(20px);
+    box-shadow: 
+      0 20px 40px rgba(0,0,0,0.4),
+      0 5px 15px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
 
   /* TASK-LND-007: 3D-perspective контейнер для карточек симулятора */
