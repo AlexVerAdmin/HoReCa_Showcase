@@ -224,32 +224,34 @@
 
   /* Левая карточка: наклон вправо-вниз */
   .card-3d-left {
-    transform: rotateY(12deg) rotateX(2deg) translateZ(0);
+    transform: perspective(2000px) rotateY(15deg) rotateX(5deg);
     transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
     box-shadow: 
-      -15px 20px 40px rgba(0, 0, 0, 0.6), 
-      5px 0 15px rgba(0, 0, 0, 0.3);
+      -20px 25px 50px rgba(0, 0, 0, 0.7), 
+      10px 0 20px rgba(0, 0, 0, 0.4);
     will-change: transform;
+    backface-visibility: hidden;
   }
 
   /* Правая карточка: наклон влево-вниз (зеркальный) */
   .card-3d-right {
-    transform: rotateY(-12deg) rotateX(2deg) translateZ(0);
+    transform: perspective(2000px) rotateY(-15deg) rotateX(5deg);
     transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
     box-shadow: 
-      15px 20px 40px rgba(0, 0, 0, 0.6), 
-      -5px 0 15px rgba(0, 0, 0, 0.3);
+      20px 25px 50px rgba(0, 0, 0, 0.7), 
+      -10px 0 20px rgba(0, 0, 0, 0.4);
     will-change: transform;
+    backface-visibility: hidden;
   }
 
-  /* Hover: карточка выравнивается и слегка приподнимается */
+  /* Hover: карточка выравнивается и "выпрыгивает" */
   .card-3d-left:hover,
   .card-3d-right:hover {
-    transform: rotateY(0deg) rotateX(0deg) translateZ(40px) scale(1.02);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
-    z-index: 10;
+    transform: perspective(2000px) rotateY(0deg) rotateX(0deg) scale(1.05) translateZ(50px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.82);
+    z-index: 50;
   }
 
   /* Mobile: отключаем 3D для читаемости */
