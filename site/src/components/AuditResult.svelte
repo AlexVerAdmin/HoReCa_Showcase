@@ -208,7 +208,7 @@
   <!-- ── CTA Кнопка ── -->
   <a
     href={registerUrl}
-    class="block w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold py-4 px-8 rounded-xl text-lg text-center transition-colors duration-200"
+    class="block w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold py-4 px-8 rounded-xl text-lg text-center transition-all duration-300 cta-dynamic"
   >
     Diese Antwort nehmen &amp; auf Google veröffentlichen →
   </a>
@@ -216,6 +216,22 @@
 </div>
 
 <style>
+  /* Динамика кнопки: легкий подъем и свечение */
+  .cta-dynamic {
+    box-shadow: 0 4px 14px 0 rgba(251, 191, 36, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-dynamic:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
+  }
+
+  .cta-dynamic:active {
+    transform: translateY(-1px) scale(0.99);
+  }
+
   /* TASK-LND-007: 3D-perspective контейнер для карточек симулятора */
   .cards-perspective {
     perspective: 2000px;
