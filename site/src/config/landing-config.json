@@ -1,0 +1,18 @@
+{
+  "scenarios": [
+    {
+      "id": "demo_1",
+      "review": "Essen war okay, aber die Bedienung sprach kein Deutsch. Sehr enttäuschend.",
+      "responses": {
+        "friendly": "Hallo! Vielen Dank für Ihr ehrliches Feedback. Es tut uns aufrichtig leid, dass die Sprachbarriere Ihren Besuch getrübt hat. Wir arbeiten aktiv daran, unser Team zu schulen. Wir freuen uns darauf, Sie bald wieder begrüßen zu dürfen!",
+        "formal": "Sehr geehrter Gast, wir bedanken uns für Ihre Rückmeldung. Ihr Hinweis bezüglich der Sprachkompetenz unserer Mitarbeiter ist für uns von großer Bedeutung. Wir werden die entsprechenden Maßnahmen einleiten und freuen uns auf Ihren nächsten Besuch."
+      }
+    }
+  ],
+  "roi_formula": {
+    "guest_loss_per_star": 50,
+    "avg_check_eur": 28,
+    "loss_multiplier": 3.5,
+    "currency": "€"
+  }
+}
