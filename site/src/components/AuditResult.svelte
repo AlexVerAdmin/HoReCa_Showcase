@@ -224,24 +224,24 @@
 
   /* Левая карточка: наклон вправо-вниз */
   .card-3d-left {
-    transform: perspective(2000px) rotateY(15deg) rotateX(5deg);
+    transform: perspective(1000px) rotateY(25deg) rotateX(8deg);
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
     box-shadow: 
-      -20px 25px 50px rgba(0, 0, 0, 0.7), 
-      10px 0 20px rgba(0, 0, 0, 0.4);
+      -30px 40px 70px rgba(0, 0, 0, 0.75), 
+      15px 0 30px rgba(0, 0, 0, 0.45);
     will-change: transform;
     backface-visibility: hidden;
   }
 
   /* Правая карточка: наклон влево-вниз (зеркальный) */
   .card-3d-right {
-    transform: perspective(2000px) rotateY(-15deg) rotateX(5deg);
+    transform: perspective(1000px) rotateY(-25deg) rotateX(8deg);
     transform-style: preserve-3d;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
     box-shadow: 
-      20px 25px 50px rgba(0, 0, 0, 0.7), 
-      -10px 0 20px rgba(0, 0, 0, 0.4);
+      30px 40px 70px rgba(0, 0, 0, 0.75), 
+      -15px 0 30px rgba(0, 0, 0, 0.45);
     will-change: transform;
     backface-visibility: hidden;
   }
@@ -249,8 +249,8 @@
   /* Hover: карточка выравнивается и "выпрыгивает" */
   .card-3d-left:hover,
   .card-3d-right:hover {
-    transform: perspective(2000px) rotateY(0deg) rotateX(0deg) scale(1.05) translateZ(50px);
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.82);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.08) translateZ(100px);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.9);
     z-index: 50;
   }
 
